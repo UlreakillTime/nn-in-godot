@@ -25,6 +25,7 @@ enum activation {
 func setup(layers_sizes: PackedInt32Array, activations: Array[activation], desirable_max_output: float = 1.0) -> Error:
 	if activations.size() != layers_sizes.size():
 		return Error.ERR_INVALID_DATA
+	#print(layers_sizes)
 	layers.clear()
 	layers.append([])
 	layers.append([])
@@ -33,8 +34,13 @@ func setup(layers_sizes: PackedInt32Array, activations: Array[activation], desir
 	for i in range(layers_sizes[0]*3):
 		layers[1].append(randf())
 	for size_index in range(1, layers_sizes.size()):
-		if not activation.has(activations[size_index]) or layers_sizes[size_index] <= 0:
+		#print(size_index)
+		#print(activation.values().has(activations[size_index]))
+		#print(activation)
+		#print(layers_sizes[size_index])
+		if not activation.values().has(activations[size_index]) or layers_sizes[size_index] <= 0:
 			return Error.ERR_INVALID_DATA
+		#print(size_index)
 		layers[0].append(float(activations[size_index]))
 		layers.append([])
 		for neuron in range((layers_sizes[size_index])*(layers_sizes[size_index-1]+3)):
@@ -45,10 +51,7 @@ func calculate_NN():
 	print("Started calculate_NN()")
 	@warning_ignore("integer_division")
 	var layer_size: int = layers[1].size()/(3)
-	print(layers)
 	for layer_index in range(2, layers.size()):
-		
-		#print(layer_index)
 		@warning_ignore("narrowing_conversion")
 		layers[layer_index] = calculate_layer(layers[layer_index-1], layers[layer_index], int(layers[0][layer_index-2]), layer_size)
 		@warning_ignore("integer_division")
