@@ -9,7 +9,7 @@ var layers: Array[PackedFloat32Array] ## All the layers (first is a list of all 
 
 var rd := RenderingServer.create_local_rendering_device() ## The thing that allows the code to use GPU
 var calculate_shader := rd.shader_create_from_spirv( ## The shader used for calulating layers 1 by 1
-	load("res://NNGLSL/Calculate.glsl").get_spirv()
+	load("../ShadersForGPU/Calculate.glsl").get_spirv()
 )
 
 enum activation {

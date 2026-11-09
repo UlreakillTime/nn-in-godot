@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://0rkflc8q4yvq"
+path="res://.godot/imported/CalculateNVIDIA.glsl-6d8bfecddaa11cfb8a645ff5276cbbec.res"
+
+[deps]
+
+source_file="res://addons/NeuralNetworksInGodot/ShadersForGPU/CalculateNVIDIA.glsl"
+dest_files=["res://.godot/imported/CalculateNVIDIA.glsl-6d8bfecddaa11cfb8a645ff5276cbbec.res"]
+
+[params]
+

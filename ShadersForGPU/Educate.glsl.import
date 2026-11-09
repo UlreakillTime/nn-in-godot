@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://bcjn58bsarl5q"
+path="res://.godot/imported/Educate.glsl-2b26c09062c19de19ac26a3ca4be6fe9.res"
+
+[deps]
+
+source_file="res://addons/NeuralNetworksInGodot/ShadersForGPU/Educate.glsl"
+dest_files=["res://.godot/imported/Educate.glsl-2b26c09062c19de19ac26a3ca4be6fe9.res"]
+
+[params]
+
